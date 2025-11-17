@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="crsf-token" content="{{ csrf_token() }}">
+    <title>Restoran - Bootstrap Restaurant Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+   
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ asset('assets/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+
+    <!-- Icon Image -->
+     <link rel="shortcut icon" href="{{asset('assets/img/logo2.jpg')}}"/>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Chargement...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <a href="/" class="navbar-brand p-0">
+                    <!--<h1 class="text-primary m-0">O'Food</h1>-->
+                     <img src="{{asset('assets/img/logo2.jpg')}}" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="{{route('home')}}" class="nav-item nav-link active">Accueil</a>
+                        <a href="{{route('menu')}}" class="nav-item nav-link">Nos Menus</a>
+                        <!--<a href="{{route('service')}}" class="nav-item nav-link">Service</a>-->
+                        <!--<a href="#menu" class="nav-item nav-link">Menu</a>-->
+                        <!--<div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="{{route('reservation')}}" class="dropdown-item">Booking</a>
+                                <a href="{{route('equipe')}}" class="dropdown-item">Our Team</a>
+                                <a href="{{route('temoignage')}}" class="dropdown-item">Testimonial</a>
+                            </div>
+                        </div>-->
+                        <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
+                        <!--<a href="{{route('panier.index')}}" class="nav-item nav-link">
+                            <i class="fa fa-shopping-cart text-primary"></i>&nbsp;<b>{{Cart::count()}}</b>
+                        </a>-->
+                    </div>                       
+                    @auth
+                        <a href="{{route('dhome')}}" class="btn btn-success py-1 px-2">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    @endauth
+                </div>
+                <a href="{{route('panier.index')}}" class="nav-item nav-link">
+                    <i class="fa fa-shopping-cart text-primary"></i>&nbsp;<sup><b class="text-white">{{Cart::count()}}</b></sup>
+                </a>
+            </nav>
+
+            
+        <!-- Navbar & Hero End -->
+
+
+        
