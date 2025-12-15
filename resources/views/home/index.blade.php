@@ -2,7 +2,7 @@
 
         
         <!-- Hero Start -->
-         <div class="container-xxl py-10bg-dark hero-header mb-0">
+         <div class="container-xl py-0 bg-dark hero-header mb-0">
                 @if(Session::has('success'))
                 <div class="alert alert-success" role="alert">
                     {{ Session::get('success') }}
@@ -15,8 +15,8 @@
                 <div class="container py-2">
                     <div class="row align-items-center">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <p class="display-3 text-white animated slideInLeft">Restaurant,traiteur</p>
-                            <!--<a href="{{route('reservation')}}" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>-->
+                            <p class="display-3 text-white animated slideInLeft">Restaurant-traiteur</p>
+                            <a href="{{route('reservation')}}" class="btn btn-primary py-sm-1 px-sm-1 me-1 animated slideInLeft">Commande speciale</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                             <img class="img-fluid" src="assets/img/hero.png" alt="">

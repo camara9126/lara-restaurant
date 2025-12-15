@@ -33,7 +33,7 @@
                     </h2>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="{{ route('categorie.index') }}" class="btn btn-danger">Annuler</a>
+                    <a href="{{ route('dmenu.index') }}" class="btn btn-danger">Annuler</a>
                 </div>
             </div>
         
@@ -47,7 +47,7 @@
                     </ul>
                 </div>
             @endif
-            <form method="POST" action="{{ route('categorie.store') }}" enctype="multipart/form-data" id="create_form">
+            <form method="POST" action="{{ route('dmenu.store') }}" enctype="multipart/form-data" id="create_form">
                 @csrf
                     <!-- bloc des images -->
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 mb-3">

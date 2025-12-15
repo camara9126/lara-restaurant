@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="crsf-token" content="{{ csrf_token() }}">
-    <title>Restoran - Bootstrap Restaurant Template</title>
+    <title>O'Food - Restaurant Traiteur</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -54,20 +54,19 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white px-4 px-lg-5 py-3 py-lg-0">
                 <a href="/" class="navbar-brand p-0">
                     <!--<h1 class="text-primary m-0">O'Food</h1>-->
-                     <img src="{{asset('assets/img/logo2.jpg')}}" alt="Logo">
+                     <img src="{{asset('assets/img/logo-3.png')}}" width="100" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="{{route('home')}}" class="nav-item nav-link active">Accueil</a>
+                        <a href="{{route('home')}}" class="nav-item nav-link">Accueil</a>
                         <a href="{{route('menu')}}" class="nav-item nav-link">Nos Menus</a>
                         <!--<a href="{{route('service')}}" class="nav-item nav-link">Service</a>-->
-                        <!--<a href="#menu" class="nav-item nav-link">Menu</a>-->
                         <!--<div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
@@ -77,9 +76,6 @@
                             </div>
                         </div>-->
                         <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
-                        <!--<a href="{{route('panier.index')}}" class="nav-item nav-link">
-                            <i class="fa fa-shopping-cart text-primary"></i>&nbsp;<b>{{Cart::count()}}</b>
-                        </a>-->
                     </div>                       
                     @auth
                         <a href="{{route('dhome')}}" class="btn btn-success py-1 px-2">
@@ -88,7 +84,7 @@
                     @endauth
                 </div>
                 <a href="{{route('panier.index')}}" class="nav-item nav-link">
-                    <i class="fa fa-shopping-cart text-primary"></i>&nbsp;<sup><b class="text-white">{{Cart::count()}}</b></sup>
+                    <i class="fa fa-shopping-cart text-primary"></i>&nbsp;<sup><b class="text-dark">{{Cart::count()}}</b></sup>
                 </a>
             </nav>
 

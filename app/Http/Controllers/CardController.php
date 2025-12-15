@@ -46,8 +46,8 @@ class CardController extends Controller
         }
 
         $articles= Article::findOrFail($request->id);
+        
         // Determiner le prix)
-
         if($request->model == 3000) {
             $price= $articles->prix;
             $label= "Petit Model";
@@ -102,12 +102,12 @@ class CardController extends Controller
 
     foreach ($cartItems as $item) {
 
-        $lineTotal = $item->price * $item->qty;
+        //$lineTotal = $item->price * $item->qty;
 
         $message .= "🍽 {$item->name} ";
-        $message .= "Prix : " . number_format($item->price, 0, ',', ' ') . " FCFA - ";
+        $message .= "PU : " . number_format($item->price, 0, ',', ' ') . " FCFA - ";
         $message .= "Quantité : {$item->qty} ";
-        $message .= "Total : " . number_format($lineTotal, 0, ',', ' ') . " FCFA - ";
+        //$message .= "Total : " . number_format($lineTotal, 0, ',', ' ') . " FCFA - ";
 
         if (!empty($articles->model->image)) {
             $message .= "Image : {$item->options->image} ";

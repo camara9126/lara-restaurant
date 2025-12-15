@@ -91,12 +91,12 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-2 col-2">
-                                               <a href="tel:+221783739364" target="_blank" class="btn btn-white mb-2 w-80 border" title="Appeler-Nous">
+                                               <a href="tel:+221785470838" target="_blank" class="btn btn-white mb-2 w-90 border" title="Appeler-Nous">
                                                 <i class="bi bi-phone text-primary"></i>
                                             </a>
                                             </div>
                                             <div class="col-md-10 col-10">
-                                                <a href="{{route('cart.whatsapp')}}" target="_blank" class="btn btn-primary mb-2 w-90" title="contact whatsapps"><i class="bi bi-whatsapp"></i>&nbsp;Commander par WhatsApp ({{Cart::subtotal()}}&nbsp;FCFA)</a>
+                                                <a href="{{route('cart.whatsapp')}}" target="_blank" class="btn btn-primary mb-2 w-90" title="contact whatsapps"><i class="bi bi-whatsapp"></i>&nbsp;Commander ({{Cart::subtotal()}}&nbsp;FCFA)</a>
                                             </div>
                                         </div>
                                     </div>
