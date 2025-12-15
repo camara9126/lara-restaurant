@@ -121,7 +121,7 @@ class CardController extends Controller
 
         $message .= "🥡 Montant total : {$total} FCFA";
 
-        $phone = "221783739364";
+        $phone = "221785470838"; // Remplacez par le numéro de téléphone du destinataire avec l'indicatif pays
 
         return redirect()->away("https://wa.me/{$phone}?text=" . urlencode($message));
 
