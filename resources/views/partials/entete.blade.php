@@ -55,7 +55,6 @@
             <a href="" type="button" class="dropdown-item text-primary mr-0 pr-0" style="font-size: 12px;" data-bs-toggle="modal" data-bs-target="#loginModal">
                 <i class="fa fa-list"></i>&nbsp;Reservation en ligne
             </a>
-  
         </div>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
