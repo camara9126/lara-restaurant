@@ -1,6 +1,5 @@
-       @include('partials.entete') 
-
-        
+@include('partials.entete') 
+     
         <!-- Hero Start -->
          <div class="container-xl py-0 bg-dark hero-header mb-0">
                 @if(Session::has('success'))
@@ -14,12 +13,13 @@
                 @endif
                 <div class="container py-2">
                     <div class="row align-items-center">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <p class="display-3 text-white animated slideInLeft">Restaurant-traiteur</p>
-                            <a href="{{route('reservation')}}" class="btn btn-primary py-sm-1 px-sm-1 me-1 animated slideInLeft">Commande speciale</a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid" src="assets/img/hero.png" alt="">
+                        
+                        <div class="col-lg-6 col-12 text-center text-lg-end overflow-hidden">
+                            <h5 class=" text-white ff-secondary" style="font-weight: bold;">Restaurant-traiteur</h5>
+                            <!--<p style="font-size: 12px;">
+                                Nous ne vendons pas seulement de la nourriture, nous vendons de l'animation urbaine, de l'inclusion sociale et de la modernité technologique.
+                            </p>-->
+                            <img class="img-fluid" src="assets/img/hero.png" width="200" alt="O'Food">
                         </div>
                     </div>
                 </div>
@@ -88,16 +88,11 @@
                                     <div class="card profile-card w-100">
                                         <div class="card-body text-center">
                                             <a href="{{route('menu.show',['id'=>$menu->id]) }}" class="justify-content-center">
-                                                <img src="{{asset('storage/'.$menu->image)}}" width="80" alt="User Profile" class="rounded-circle profile-img mb-3">
+                                                <img src="{{asset('storage/'.$menu->image)}}" width="80" alt="{{$menu->nom}}" class="rounded-circle profile-img mb-3">
                                             </a>
                                             <a href="{{route('menu.show',['id'=>$menu->id]) }}" style="color: #030b51;" class="card-title">
                                                 <b class="card-title mb-0">{{$menu->nom}}</b>
                                             </a>
-                                            <!--<p class="card-text text-muted mb-3">Web Developer</p>-->
-                                            <!--<div class="social-icons mb-4">
-                                                <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
-                                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                            </div>-->
                                         </div>
                                     </div>
                                 </div>

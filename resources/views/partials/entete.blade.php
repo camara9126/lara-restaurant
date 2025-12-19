@@ -7,8 +7,9 @@
     <title>O'Food - Restaurant Traiteur</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta content="" name="description">
-   
+    <meta content="" name="descr   
+
+        <meta name="theme-color" content="#f1b40aff">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -26,6 +27,9 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Boutton Reservation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
     <!-- Libraries Stylesheet -->
     <link href="{{ asset('assets/lib/animate/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
@@ -42,6 +46,17 @@
 </head>
 
 <body>
+    <!-- Icon Fixe -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square icon-fixe dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-headset"></i></a>
+        <div class="dropdown-menu m-0">
+            <a href="tel+785470838" type="button" class="dropdown-item  text-primary mr-0 pr-0" style="font-size: 12px;">
+                <i class="fa fa-headset"></i>&nbsp;Service clientel
+            </a>
+            <a href="" type="button" class="dropdown-item text-primary mr-0 pr-0" style="font-size: 12px;" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <i class="fa fa-list"></i>&nbsp;Reservation en ligne
+            </a>
+  
+        </div>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -50,32 +65,69 @@
             </div>
         </div>
         <!-- Spinner End -->
+            
+            <div class="modal fade" id="loginModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title">Bienvenue !</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                            <label class="form-label">Nom Complet</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="name@example.com">
+                                <span class="input-group-text">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                            </div>
 
+                            <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter your password">
+                                <span class="input-group-text password-toggle">
+                                    <i class="fas fa-eye"></i>
+                                </span>
+                            </div>
+                            </div>
+
+                            <div class="form-check">
+
+                            <button type="submit" class="btn btn-login text-white">Sign In</button>
+
+                            <div class="divider">
+                            <span>or continue with</span>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-white bg-white px-4 px-lg-5 py-3 py-lg-0">
-                <a href="/" class="navbar-brand p-0">
-                    <!--<h1 class="text-primary m-0">O'Food</h1>-->
-                     <img src="{{asset('assets/img/logo-3.png')}}" width="100" alt="Logo">
+                <a href="{{route('home')}}" class="navbar-brand p-0">
+                     <img src="{{asset('assets/img/logo-3.png')}}" width="160" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
+                    <span class="fa fa-bars"></span>&nbsp;
+                    <a href="{{route('panier.index')}}" class="">
+                        <i class="fa fa-shopping-cart text-primary"><sup><b class="text-dark">{{Cart::count()}}</b></sup></i>&nbsp;
+                    </a>
                 </button>
+                
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="{{route('home')}}" class="nav-item nav-link">Accueil</a>
-                        <a href="{{route('menu')}}" class="nav-item nav-link">Nos Menus</a>
-                        <!--<a href="{{route('service')}}" class="nav-item nav-link">Service</a>-->
-                        <!--<div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="{{route('reservation')}}" class="dropdown-item">Booking</a>
-                                <a href="{{route('equipe')}}" class="dropdown-item">Our Team</a>
-                                <a href="{{route('temoignage')}}" class="dropdown-item">Testimonial</a>
-                            </div>
-                        </div>-->
-                        <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
+                        <a href="{{route('home')}}" class="nav-item nav-link active">Accueil</a>
+                        <a href="{{route('menu')}}" class="nav-item nav-link active">Nos Menus</a>
+                        <a href="{{route('reservation')}}" class="nav-item nav-link active">Reservation</a>
+                        <a href="{{route('contact')}}" class="nav-item nav-link active">Contact</a>
                     </div>                       
                     @auth
                         <a href="{{route('dhome')}}" class="btn btn-success py-1 px-2">
@@ -83,9 +135,8 @@
                         </a>
                     @endauth
                 </div>
-                <a href="{{route('panier.index')}}" class="nav-item nav-link">
-                    <i class="fa fa-shopping-cart text-primary"></i>&nbsp;<sup><b class="text-dark">{{Cart::count()}}</b></sup>
-                </a>
+                </div>
+                
             </nav>
 
             
