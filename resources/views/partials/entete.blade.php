@@ -7,9 +7,8 @@
     <title>O'Food - Restaurant Traiteur</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta content="" name="descr   
-
-        <meta name="theme-color" content="#f1b40aff">
+    <meta content="" name="description">  
+    <meta name="theme-color" content="#f1b40aff">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
