@@ -93,8 +93,6 @@
                                             <a href="{{route('menu.show',['id'=>$menu->id]) }}" style="color: #030b51;" class="card-title">
                                                 <b class="card-title mb-0">{{$menu->nom}}</b>
                                             </a>
- class="card-title mb-0">{{$menu->nom}}</b>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>

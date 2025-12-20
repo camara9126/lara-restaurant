@@ -7,22 +7,6 @@
                     <h1 class="mb-5">Contact pour toute question</h1>
                 </div>
                 <div class="row g-4">
-                    <!--<div class="col-12">
-                        <div class="row gy-4">
-                            <div class="col-md-4">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">Réservation</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>reservation@food.com</p>
-                            </div>
-                            <div class="col-md-4">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">Generale</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@ofood.com</p>
-                            </div>
-                            <div class="col-md-4">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">Technique</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>tech@ofood.com</p>
-                            </div>
-                        </div>
-                    </div>-->
                     <div class="col-md-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
                             <p class="mb-2"><i class="fa fa-map-marker-alt"></i>St-Louis, SENEGAL</p>
@@ -43,38 +27,6 @@
                         <a class="btn btn-outline-primary btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <!--<a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>-->
                     </div>
-                            <!-- <form>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                            <label for="name">Your Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                            <label for="email">Your Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                            <label for="subject">Subject</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                            <label for="message">Message</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>-->
-                        </div>
                     </div>
                 </div>
             </div>

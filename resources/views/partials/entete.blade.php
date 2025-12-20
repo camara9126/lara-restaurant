@@ -45,16 +45,9 @@
 </head>
 
 <body>
-    <!-- Icon Fixe -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square icon-fixe dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-headset"></i></a>
-        <div class="dropdown-menu m-0">
-            <a href="tel+785470838" type="button" class="dropdown-item  text-primary mr-0 pr-0" style="font-size: 12px;">
-                <i class="fa fa-headset"></i>&nbsp;Service clientel
-            </a>
-            <a href="" type="button" class="dropdown-item text-primary mr-0 pr-0" style="font-size: 12px;" data-bs-toggle="modal" data-bs-target="#loginModal">
-                <i class="fa fa-list"></i>&nbsp;Reservation en ligne
-            </a>
-        </div>
+
+        
+        
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -64,51 +57,11 @@
         </div>
         <!-- Spinner End -->
             
-            <div class="modal fade" id="loginModal" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title">Bienvenue !</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                            <label class="form-label">Nom Complet</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="name@example.com">
-                                <span class="input-group-text">
-                                    <i class="fas fa-envelope"></i>
-                                </span>
-                            </div>
-                            </div>
-
-                            <div class="mb-3">
-                            <label class="form-label">Password</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter your password">
-                                <span class="input-group-text password-toggle">
-                                    <i class="fas fa-eye"></i>
-                                </span>
-                            </div>
-                            </div>
-
-                            <div class="form-check">
-
-                            <button type="submit" class="btn btn-login text-white">Sign In</button>
-
-                            <div class="divider">
-                            <span>or continue with</span>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-                </div>
-            </div>
+           
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
+            
             <nav class="navbar navbar-expand-lg navbar-white bg-white px-4 px-lg-5 py-3 py-lg-0">
                 <a href="{{route('home')}}" class="navbar-brand p-0">
                      <img src="{{asset('assets/img/logo-3.png')}}" width="160" alt="Logo">
@@ -124,7 +77,7 @@
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="{{route('home')}}" class="nav-item nav-link active">Accueil</a>
                         <a href="{{route('menu')}}" class="nav-item nav-link active">Nos Menus</a>
-                        <a href="{{route('reservation')}}" class="nav-item nav-link active">Reservation</a>
+                        <!--<a href="{{route('reservation')}}" class="nav-item nav-link active">Reservation</a>-->
                         <a href="{{route('contact')}}" class="nav-item nav-link active">Contact</a>
                     </div>                       
                     @auth
@@ -135,10 +88,74 @@
                 </div>
                 </div>
                 
-            </nav>
+            </nav>     
+            <!-- Navbar & Hero End -->
 
-            
-        <!-- Navbar & Hero End -->
 
+            <!-- Icon Fixe -->
+            <a href="#" class="btn btn-lg btn-primary btn-lg-square icon-fixe dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-headset"></i></a>
+            <div class="dropdown-menu m-0">
+                <a href="tel:+785470838" type="button" target="_blank" class="dropdown-item text-primary mr-0 pr-0" style="font-size: 12px;">
+                    <i class="fa fa-headset"></i>&nbsp;Service clientel
+                </a>
+                <a href="" type="button" class="dropdown-item text-primary mr-0 pr-0" style="font-size: 12px;" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <i class="fa fa-list"></i>&nbsp;Commande en ligne
+                </a>
+            </div>
+            <div class="modal fade" id="loginModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title">Bienvenue !</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Nom Complet</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Votre nom et prénom">
+                                    <!--<span class="input-group-text">
+                                        <i class="fas fa-list"></i>
+                                    </span>-->
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Téléphone</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Entrer votre numéro">
+                                    <!--<span class="input-group-text password-toggle">
+                                        <i class="fas fa-phone"></i>
+                                    </span>-->
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Date de Livraison</label>
+                                <div class="input-group">
+                                    <input type="dqte" class="form-control" placeholder="Entrer la date de livraison">
+                                    <!--<span class="input-group-text password-toggle">
+                                        <i class="fas fa-phone"></i>
+                                    </span>-->
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Commentaire</label>
+                                <div class="input-group">
+                                    <textarea class="form-control" name=""></textarea>
+                                    <!--<span class="input-group-text password-toggle">
+                                        <i class="fas fa-phone"></i>
+                                    </span>-->
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-login text-white">Commander</button>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
 
         
