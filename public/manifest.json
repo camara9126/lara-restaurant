@@ -16,6 +16,11 @@
       "src": "/icons/logo-icon.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/icons/icon3.png",
+      "sizes": "64x64",
+      "type": "image/png"
     }
   ]
 }
