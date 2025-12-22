@@ -11,7 +11,7 @@
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
                             <p class="mb-2"><i class="fa fa-map-marker-alt"></i>St-Louis, SENEGAL</p>
                             <p class="mb-2"><i class="fa fa-phone-alt"></i>(+221)78-547-08-38</p>
-                            <p class="mb-2"><i class="fa fa-envelope"></i>info@ofood.com</p>
+                            <p class="mb-2"><i class="fa fa-envelope"></i>contact@ofood.com</p>
                             
                         </div>
                     </div>
