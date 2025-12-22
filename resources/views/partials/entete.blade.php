@@ -9,6 +9,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">  
     <meta name="theme-color" content="#f1b40aff">
+    <meta name="apple-mobile-web-app-capable" content="#f1b40aff">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -42,6 +43,9 @@
 
     <!-- Icon Image -->
      <link rel="shortcut icon" href="{{asset('assets/img/logo2.jpg')}}"/>
+
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
 </head>
 
 <body>

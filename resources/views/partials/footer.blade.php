@@ -12,9 +12,9 @@
                     </div>
                     <div class="col-6 col-lg-6 col-md-6">
                         <h4 class="section-title text-primary mb-1">Contact</h4>
-                        <p class=""><i class="fa fa-map-marker-alt"></i>&nbsp;St-Louis, SENEGAL</p>
-                        <p class=""><i class="fa fa-phone-alt"></i>&nbsp;78-547-08-38</p>
-                        <p class=""><i class="fa fa-envelope"></i>&nbsp;contact@ofood.com</p>
+                        <p class=""><i class="fa fa-map-marker-alt"></i> &nbsp; St-Louis, SENEGAL</p>
+                        <p class=""><i class="fa fa-phone-alt"></i> &nbsp; 78-547-08-38</p>
+                        <p class=""><i class="fa fa-envelope"></i> &nbsp; contact@ofood.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -40,14 +40,6 @@
                             &copy; <a class="border-bottom" href="/">O'Food sn</a>, Tous Droit Reserve. 							
 							Designed By <a class="border-bottom" href="https://www.bcmgroupe.com" target="_blank">BCM Groupe Saint-Louis</a>
                         </div>
-                        <!--<div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>-->
-                        </div>
                     </div>
                 </div>
             </div>
@@ -59,9 +51,20 @@
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
-k-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
 
+
+    <!-- Service-Worker JS File -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+                console.log('Service Worker enregistré avec le scope : ', registration.scope);
+            })
+            .catch(function(error) {
+                console.log('Échec de l\'enregistrement du Service Worker : ', error);
+            });
+        }
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
