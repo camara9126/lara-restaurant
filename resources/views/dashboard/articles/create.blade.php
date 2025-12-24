@@ -79,9 +79,17 @@
                                 </div>
                             </div> 
                             <div class="row">
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-4 form-group">
                                     <label for="price">Prix</label> <span class="text-danger">*</span>
                                     <input type="text" name="prix" id="price" class="form-control">
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label for="price">Prix</label> <span class="text-danger">*</span>
+                                    <input type="text" name="prix2" id="price2" class="form-control">
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label for="price">Prix</label> <span class="text-danger">*</span>
+                                    <input type="text" name="prix3" id="price3" class="form-control">
                                 </div>
                             </div>
                             <div class=" col-md-8 form-group">

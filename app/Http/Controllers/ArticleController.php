@@ -37,6 +37,8 @@ class ArticleController extends Controller
             'nom' => 'required','string',
             'description' => 'required',
             'prix' => 'required',
+            'prix2' => 'nullable',
+            'prix3' => 'nullable',
             'menu_id' => 'required', 'exists:menus,id',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
@@ -55,6 +57,8 @@ class ArticleController extends Controller
             'nom' => $request->nom,
             'description' => $request->description,
             'prix' => $request->prix,
+            'prix2' => $request->prix2 ?? null,
+            'prix3' => $request->prix3 ?? null,
             'menu_id' => $request->menu_id,
             'image' => $path,
         ]);
@@ -96,8 +100,8 @@ class ArticleController extends Controller
             'nom' => 'required','string',
             'description' => 'required',
             'prix' => 'required',
-            'prix2' => 'required',
-            'prix3' => 'required',
+            'prix2' => 'nullable',
+            'prix3' => 'nullable',
             'menu_id' => 'required', 'exists:menus,id',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
@@ -116,8 +120,8 @@ class ArticleController extends Controller
             'nom' => $request->nom,
             'description' => $request->description,
             'prix' => $request->prix,
-            'prix2' => $request->prix2,
-            'prix3' => $request->prix3,
+            'prix2' => $request->prix2 ?? null,
+            'prix3' => $request->prix3 ?? null,
             'menu_id' => $request->menu_id,
             'image' => $path,
         ]);
