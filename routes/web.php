@@ -20,7 +20,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/doc', function () {
-    return view('welcome');
+    return view('dashboard.home');
 });
 
 
