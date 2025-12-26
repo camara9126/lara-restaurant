@@ -19,8 +19,10 @@ Route::get('/', function () {
     return view('home.index', compact('menus','articles'));
 })->name('home');
 
-Route::get('/doc', function () {
-    return view('dashboard.home');
+Route::get('/doc/{id}', function ($id) {
+   $menu= menu::findOrFail($id);
+    $articles= Article::where('menu_id', $menu->id)->get();
+    return view('home.test2', compact('articles'));
 });
 
 

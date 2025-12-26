@@ -137,6 +137,7 @@
                             </span>
                             <span class="text-muted"><i class="bi bi-star-fill text-warning"></i> 4.7/5</span>
                         </div>
+                        
                         <button class="btn btn-view w-100" data-bs-toggle="modal" data-bs-target="#productModal" 
                                 data-product-id="{{ $product->id }}" data-product-name="{{ $product->name }}" data-product-price="{{ number_format($product->price, 2, ',', ' ') }}"
                                 data-product-img="{{ $product->image_url }}">
@@ -214,158 +215,73 @@
     
     <!-- JavaScript simple pour gérer les données des produits -->
     <script>
-        // Données des produits (simplifiées)
-        const productsData = {
-            1: {
-                name: "Smartphone Pro X",
-                price: "899,99 €",
-                img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-                description: "Le Smartphone Pro X redéfinit l'expérience mobile avec son écran OLED de 6.7 pouces offrant des couleurs vibrantes et des noirs profonds. Equipé d'un processeur octa-core dernier cri et de 12Go de RAM, il offre des performances fluides pour toutes vos applications.",
-                stock: "En stock (15 unités)",
-                rating: "4.7/5",
-                specs: {
-                    "Écran": "6.7 pouces OLED",
-                    "Processeur": "Octa-core 3.2GHz",
-                    "RAM": "12 Go",
-                    "Stockage": "256 Go",
-                    "Caméra": "Triple 108MP + 12MP + 8MP",
-                    "Batterie": "5000 mAh",
-                    "OS": "Android 13"
-                }
-            },
-            2: {
-                name: "Casque Audio Sans Fil",
-                price: "249,99 €",
-                img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-                description: "Profitez d'une expérience audio immersive avec ces casques sans fil équipés d'une réduction de bruit active de dernière génération. Ils bloquent jusqu'à 95% des bruits ambiants pour vous permettre de vous concentrer sur votre musique.",
-                stock: "En stock (8 unités)",
-                rating: "4.5/5",
-                specs: {
-                    "Autonomie": "30 heures",
-                    "Charge rapide": "15 min = 5h d'écoute",
-                    "Réduction de bruit": "Active",
-                    "Connectivité": "Bluetooth 5.2",
-                    "Poids": "265 g",
-                    "Microphone": "Intégré avec réduction de bruit"
-                }
-            },
-            3: {
-                name: "Montre Connectée Sport",
-                price: "329,99 €",
-                img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-                description: "Cette montre connectée est le compagnon idéal pour vos activités sportives. Elle intègre un GPS précis pour suivre vos parcours de course, vélo ou randonnée. Le monitoring cardiaque 24h/24 vous permet de suivre votre fréquence cardiaque en temps réel.",
-                stock: "Stock faible (3 unités)",
-                rating: "4.8/5",
-                specs: {
-                    "Écran": "AMOLED 1.4 pouces",
-                    "Autonomie": "7 jours",
-                    "GPS": "Intégré",
-                    "Résistance à l'eau": "5 ATM (50m)",
-                    "Capteurs": "Cardiaque, SpO2, Accéléromètre",
-                    "Notifications": "Appels, messages, apps"
-                }
-            },
-            4: {
-                name: "Tablette Graphique",
-                price: "459,99 €",
-                img: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-                description: "Cette tablette graphique professionnelle offre un écran de 10 pouces avec une résolution 4K pour un travail de précision. Le stylet sans batterie offre 8192 niveaux de pression pour un contrôle artistique exceptionnel.",
-                stock: "En stock (12 unités)",
-                rating: "4.6/5",
-                specs: {
-                    "Écran": "10 pouces 4K",
-                    "Stylet": "8192 niveaux de pression",
-                    "Connectivité": "USB-C, Bluetooth",
-                    "Compatibilité": "Windows, Mac, Android",
-                    "Couleurs": "98% Adobe RGB",
-                    "Angle de vision": "178°"
-                }
-            },
-            5: {
-                name: "Enceinte Bluetooth Portable",
-                price: "129,99 €",
-                img: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-                description: "Cette enceinte Bluetooth portable offre un son stéréo puissant et riche malgré sa taille compacte. Avec une autonomie de 20 heures, elle est parfaite pour les voyages, pique-niques ou fêtes en extérieur.",
-                stock: "En stock (25 unités)",
-                rating: "4.4/5",
-                specs: {
-                    "Puissance": "20W stéréo",
-                    "Autonomie": "20 heures",
-                    "Résistance": "IPX7 (étanche)",
-                    "Bluetooth": "Version 5.0",
-                    "Poids": "680 g",
-                    "Entrées": "USB-C, Aux-in"
-                }
-            },
-            6: {
-                name: "Console de Jeux Portable",
-                price: "399,99 €",
-                img: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-                description: "Cette console de jeux portable révolutionne le gaming nomade avec son écran OLED 7 pouces offrant des couleurs vibrantes et un temps de réponse ultra-rapide. Son processeur surpuissant permet de jouer aux jeux AAA les plus récents.",
-                stock: "Stock faible (2 unités)",
-                rating: "4.9/5",
-                specs: {
-                    "Écran": "7 pouces OLED 120Hz",
-                    "Processeur": "CPU Zen 2, GPU RDNA 2",
-                    "RAM": "16 Go LPDDR5",
-                    "Stockage": "512 Go SSD",
-                    "Autonomie": "4-8 heures",
-                    "Connectivité": "Wi-Fi 6, Bluetooth 5.1"
-                }
-            }
-        };
-        
-        // Quand la modal s'ouvre, on remplit les informations du produit
-        document.addEventListener('DOMContentLoaded', function() {
-            // Ajouter un écouteur d'événement sur chaque bouton "Voir"
-            const viewButtons = document.querySelectorAll('[data-bs-target="#productModal"]');
+            // Données des produits (simplifiées)
+            const productsData = {
+                @foreach($articles as $art)
+                            {{$art->id}}: {
+                                name: "{{ $art->nom }}",
+                                price: "{{ number_format($art->prix, 2, ',', ' ') }} F CFA",
+                                img: "{{ asset('storage/'.$art->image) }}",
+                                description: "{{ $art->description }}",
+                                stock: "Disponible",
+                            },
+                @endforeach
+            };
+
             
-            viewButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const productId = this.getAttribute('data-product-id');
-                    const product = productsData[productId];
-                    
-                    if (product) {
-                        // Mettre à jour les informations dans la modal
-                        document.getElementById('modal-product-name').textContent = product.name;
-                        document.getElementById('modal-product-price').textContent = product.price;
-                        document.getElementById('modal-product-img').src = product.img;
-                        document.getElementById('modal-product-img').alt = product.name;
-                        document.getElementById('modal-product-description').textContent = product.description;
-                        document.getElementById('modal-stock').textContent = product.stock;
-                        document.getElementById('modal-rating').innerHTML = `<i class="bi bi-star-fill text-warning"></i> ${product.rating}`;
+            // Quand la modal s'ouvre, on remplit les informations du produit
+            document.addEventListener('DOMContentLoaded', function() {
+                // Ajouter un écouteur d'événement sur chaque bouton "Voir"
+                const viewButtons = document.querySelectorAll('[data-bs-target="#productModal"]');
+                
+                viewButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const productId = this.getAttribute('data-product-id');
+                        const product = productsData[productId];
                         
-                        // Mettre à jour le titre de la modal
-                        document.getElementById('productModalLabel').textContent = product.name;
-                        
-                        // Mettre à jour les spécifications
-                        const specsContainer = document.getElementById('modal-product-specs');
-                        specsContainer.innerHTML = '';
-                        
-                        // Ajouter chaque spécification
-                        for (const [key, value] of Object.entries(product.specs)) {
-                            const specItem = document.createElement('div');
-                            specItem.className = 'spec-item';
-                            specItem.innerHTML = `
-                                <div class="d-flex justify-content-between">
-                                    <span class="spec-label">${key}</span>
-                                    <span class="spec-value">${value}</span>
-                                </div>
-                            `;
-                            specsContainer.appendChild(specItem);
+                        if (product) {
+                            // Mettre à jour les informations dans la modal
+                            document.getElementById('modal-product-name').textContent = product.name;
+                            document.getElementById('modal-product-price').textContent = product.price;
+                            document.getElementById('modal-product-img').src = product.img;
+                            document.getElementById('modal-product-img').alt = product.name;
+                            document.getElementById('modal-product-description').textContent = product.description;
+                            document.getElementById('modal-stock').textContent = product.stock;
+                            
+                            // // Recuperer le id du produit
+                            document.getElementById('modal-product-id-input').value = productId;
+
+                            // Mettre à jour le titre de la modal
+                            document.getElementById('productModalLabel').textContent = product.name;
+                            
+                            // Mettre à jour les spécifications
+                            const specsContainer = document.getElementById('modal-product-specs');
+                            specsContainer.innerHTML = '';
+                            
+                            // Ajouter chaque spécification
+                            for (const [key, value] of Object.entries(product.specs)) {
+                                const specItem = document.createElement('div');
+                                specItem.className = 'spec-item';
+                                specItem.innerHTML = `
+                                    <div class="d-flex justify-content-between">
+                                        <span class="spec-label">${key}</span>
+                                        <span class="spec-value">${value}</span>
+                                    </div>
+                                `;
+                                specsContainer.appendChild(specItem);
+                            }
+                            
+                            // Changer la couleur du badge de stock
+                            const stockBadge = document.getElementById('modal-stock');
+                            if (product.stock.includes('Stock faible')) {
+                                stockBadge.className = 'badge bg-warning text-dark mb-2';
+                            } else {
+                                stockBadge.className = 'badge bg-success mb-2';
+                            }
                         }
-                        
-                        // Changer la couleur du badge de stock
-                        const stockBadge = document.getElementById('modal-stock');
-                        if (product.stock.includes('Stock faible')) {
-                            stockBadge.className = 'badge bg-warning text-dark mb-2';
-                        } else {
-                            stockBadge.className = 'badge bg-success mb-2';
-                        }
-                    }
+                    });
                 });
             });
-        });
-    </script>
+        </script>
 </body>
 </html>

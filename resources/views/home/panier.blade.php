@@ -17,7 +17,7 @@
                         <h1 class="">Votre panier</h1>
                         <div class="text-start mb-2">
                             <a href="{{route('home')}}" class="btn btn-outline-primary">
-                                <i class="bi bi-arrow-left me-2"></i>Retour au menu
+                                <i class="bi bi-arrow-left me-1"></i>
                             </a>
                         </div>
                         <div class="row g-2 g-sm-3 g-xl-4">

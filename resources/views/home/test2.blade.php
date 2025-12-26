@@ -80,7 +80,7 @@
 
                      <form action="{{route('panier.store')}}" method="post">
                         @csrf
-                        <input type="hidden" name="id" id="article_id">
+                        <input type="text" name="id" id="article_id">
                             
                         <h4 class="price fw-bold text-primary mb-3"></h4>
 

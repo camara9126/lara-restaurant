@@ -42,7 +42,7 @@ class CardController extends Controller
         });
 
         if($dupplicate->isNotEmpty()) {
-            return redirect()->route('home')->with('success', 'Le plat a déja été ajoute');
+            return redirect()->back()->with('success', 'Le plat a déja été ajoute');
         }
 
         $articles= Article::findOrFail($request->id);
