@@ -76,7 +76,7 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 //Route panier
 Route::resource('/panier',CardController::class);
-Route::post('/ajout/panier', [CardController::class, 'store'])->name('panier.store');
+//Route::post('/ajout/panier', [CardController::class, 'store'])->name('panier.store');
 Route::delete('/ajout/{rowId}', [CardController::class, 'destroy'])->name('panier.destroy');
 Route::delete('/ajout/{rowId}', [CardController::class, 'delete'])->name('delete');
 
