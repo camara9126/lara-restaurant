@@ -91,7 +91,7 @@ Route::resource('/personnel', PersonnelController::class);
 Route::resource('/darticle', ArticleController::class)->middleware(['auth','verified']);
 Route::get('/article/{id}',[ArticleController::class, 'show'])->name('article.show');
 //Route::get('/darticle/{id}/edit',[ArticleController::class, 'edit'])->middleware(['auth','verified'])->name('darticle.edit');
-Route::patch('/darticle/{id}',[ArticleController::class, 'update'])->middleware(['auth','verified'])->name('darticle.update');
+//Route::patch('/darticle/{id}',[ArticleController::class, 'update'])->middleware(['auth','verified'])->name('darticle.update');
 
 
 //Dashboard
