@@ -77,7 +77,7 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 //Route panier
 Route::resource('/panier',CardController::class);
 //Route::post('/ajout/panier', [CardController::class, 'store'])->name('panier.store');
-Route::delete('/ajout/{rowId}', [CardController::class, 'destroy'])->name('panier.destroy');
+//Route::delete('/ajout/{rowId}', [CardController::class, 'destroy'])->name('panier.destroy');
 Route::delete('/ajout/{rowId}', [CardController::class, 'delete'])->name('delete');
 
 // Route mise a jour commande panier
@@ -89,7 +89,7 @@ Route::resource('/personnel', PersonnelController::class);
 
 //Article
 Route::resource('/darticle', ArticleController::class)->middleware(['auth','verified']);
-Route::get('/article/{id}',[ArticleController::class, 'show'])->name('article.show');
+//Route::get('/article/{id}',[ArticleController::class, 'show'])->name('article.show');
 //Route::get('/darticle/{id}/edit',[ArticleController::class, 'edit'])->middleware(['auth','verified'])->name('darticle.edit');
 //Route::patch('/darticle/{id}',[ArticleController::class, 'update'])->middleware(['auth','verified'])->name('darticle.update');
 
@@ -106,7 +106,7 @@ Route::get('/dhome', function () {
 //Menu
 Route::resource('/dmenu', MenuController::class)->middleware(['auth','verified']);
 Route::get('/menu/{id}',[MenuController::class, 'show'])->name('menu.show');
-Route::patch('/dmenu/{id}/edit',[MenuController::class, 'edit'])->middleware(['auth','verified'])->name('dmenu.edit');
+//Route::patch('/dmenu/{id}/edit',[MenuController::class, 'edit'])->middleware(['auth','verified'])->name('dmenu.edit');
 Route::patch('/dmenu/{id}',[MenuController::class, 'update'])->middleware(['auth','verified'])->name('dmenu.update');
 
 //Route whatsapp
