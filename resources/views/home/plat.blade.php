@@ -88,16 +88,16 @@
 
                     <div class="d-grid gap-2 d-md-flex mt-4">
                         <button class="btn btn-primary flex-fill">
-                            <i class="bi bi-cart-plus"></i> Ajouter au panier
+                            <i class="bi bi-cart-plus"></i> Ajouter
                         </button>
+                        <a type="button" href="tel:+221785470838" target="_blank" class="btn btn-success border" title="Appeler-Nous">
+                            <i class="bi bi-whatsapp"> Contacter-Nous</i>
+                        </a>
                     </div>
                 </div>
 
                 <div class="modal-footer">
-                    <a type="button" href="tel:+221785470838" target="_blank" class="btn btn-secondary border" title="Appeler-Nous">
-                        <i class="bi bi-phone">Contacter-Nous</i>
-                    </a>
-                    <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>-->
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                 </div>
 
                 </div>

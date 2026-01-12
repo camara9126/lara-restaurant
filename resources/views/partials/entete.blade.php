@@ -67,7 +67,7 @@
         <div class="container-xxl position-relative p-0">
             
             <nav class="navbar navbar-expand-lg navbar-white bg-white px-4 px-lg-5 py-3 py-lg-0">
-                <a href="{{route('home')}}" class="navbar-brand p-0">
+                <a href="/" class="navbar-brand p-0">
                      <img src="{{asset('assets/img/logo-3.png')}}" width="160" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -81,7 +81,6 @@
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="{{route('home')}}" class="nav-item nav-link active">Accueil</a>
                         <a href="{{route('menu')}}" class="nav-item nav-link active">Nos Menus</a>
-                        <!--<a href="{{route('reservation')}}" class="nav-item nav-link active">Reservation</a>-->
                         <a href="{{route('contact')}}" class="nav-item nav-link active">Contact</a>
                     </div>                       
                     @auth
@@ -99,26 +98,36 @@
             <!-- Icon Fixe -->
             <a href="#" class="btn btn-lg btn-primary btn-lg-square icon-fixe dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-headset"></i></a>
             <div class="dropdown-menu m-0">
-                <a href="tel:+785470838" type="button" target="_blank" class="dropdown-item text-primary mr-0 pr-0" style="font-size: 12px;">
-                    <i class="fa fa-headset"></i>&nbsp;Service clientel
+                <a href="tel:221785470838" type="button" target="_blank" class="dropdown-item text-primary mr-0 pr-0" style="font-size: 12px;">
+                    <i class="fa fa-headset"></i>&nbsp;Service clientelle
                 </a>
                 <a href="" type="button" class="dropdown-item text-primary mr-0 pr-0" style="font-size: 12px;" data-bs-toggle="modal" data-bs-target="#loginModal">
-                    <i class="fa fa-list"></i>&nbsp;Commande en ligne
+                    <i class="fa fa-list"></i>&nbsp;Commande  speciale
                 </a>
             </div>
             <div class="modal fade" id="loginModal" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title">Bienvenue !</h5>
+                    <h5 class="modal-title">Faire votre commande speciale en ligne !</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
+                        <form method="post" action="{{ route('commande')}}">
+                            @csrf
                             <div class="mb-3">
                                 <label class="form-label">Nom Complet</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Votre nom et prénom">
+                                    <input type="text" class="form-control" name="nom" placeholder="Votre nom et prénom">
                                     <!--<span class="input-group-text">
                                         <i class="fas fa-list"></i>
                                     </span>-->
@@ -128,7 +137,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Téléphone</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Entrer votre numéro">
+                                    <input type="text" class="form-control" name="telephone" placeholder="Entrer votre numéro">
                                     <!--<span class="input-group-text password-toggle">
                                         <i class="fas fa-phone"></i>
                                     </span>-->
@@ -138,7 +147,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Date de Livraison</label>
                                 <div class="input-group">
-                                    <input type="dqte" class="form-control" placeholder="Entrer la date de livraison">
+                                    <input type="date" class="form-control" name="date" placeholder="Entrer votre date de livraison">
                                     <!--<span class="input-group-text password-toggle">
                                         <i class="fas fa-phone"></i>
                                     </span>-->
@@ -146,9 +155,9 @@
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Commentaire</label>
+                                <label class="form-label">Details de la commande</label>
                                 <div class="input-group">
-                                    <textarea class="form-control" name=""></textarea>
+                                    <textarea class="form-control" name="commentaire"></textarea>
                                     <!--<span class="input-group-text password-toggle">
                                         <i class="fas fa-phone"></i>
                                     </span>-->
