@@ -105,7 +105,7 @@ Route::get('/dhome', function () {
 
 //Menu
 Route::resource('/dmenu', MenuController::class)->middleware(['auth','verified']);
-//Route::get('/menu/{id}',[MenuController::class, 'show'])->name('menu.show');
+Route::get('/menu/{id}',[MenuController::class, 'show'])->name('menu.show');
 //Route::patch('/dmenu/{id}/edit',[MenuController::class, 'edit'])->middleware(['auth','verified'])->name('dmenu.edit');
 //Route::patch('/dmenu/{id}',[MenuController::class, 'update'])->middleware(['auth','verified'])->name('dmenu.update');
 
