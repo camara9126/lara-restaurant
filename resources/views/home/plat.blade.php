@@ -90,7 +90,7 @@
                         <button class="btn btn-primary flex-fill">
                             <i class="bi bi-cart-plus"></i> Ajouter
                         </button>
-                        <a type="button" href="tel:+221785470838" target="_blank" class="btn btn-success border" title="Appeler-Nous">
+                        <a type="button" href="https://wa.me/221785470838" target="_blank" class="btn btn-success border" title="Appeler-Nous">
                             <i class="bi bi-whatsapp"> Contacter-Nous</i>
                         </a>
                     </div>
