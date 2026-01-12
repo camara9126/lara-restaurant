@@ -13,7 +13,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menus= Menu::all();
+        $menus= Menu::latest()->simplePaginate(5);
         return view('dashboard.menus.index', compact('menus'));
     }
 

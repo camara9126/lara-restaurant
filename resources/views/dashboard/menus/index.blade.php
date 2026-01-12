@@ -79,6 +79,11 @@
                             </div>
                             
                         </div>
+                        <div class="row text-center mt-4">
+                            <div class="clo-12">
+                                {{$menus->links()}}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

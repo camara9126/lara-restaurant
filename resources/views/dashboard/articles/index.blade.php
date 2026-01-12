@@ -85,8 +85,12 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                            </div> 
+                        </div>
+                        <div class="row text-center mt-4">
+                            <div class="clo-12">
+                                {{$articles->links()}}
                             </div>
-                                
                         </div>
                     </div>
                 </div>

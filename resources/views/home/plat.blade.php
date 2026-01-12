@@ -61,8 +61,10 @@
                     <h3 class="title fw-bold mb-2"></h3>
 
                     <!-- Image du produit -->
-                    <div class="col-md-12">
-                        <img id="image" src="image" class="image d-center " alt="Image produit">
+                    <div class="col-12" style="align-items: center;">
+                        <div class="d-flex justify-content-center">
+                        <img id="image" src="image" class="image" style="align-items: center;" width="300" alt="Image produit">
+                        </div>
                         <div class="text-center">
                             <span class="badge bg-success mb-2">Disponible</span>
                         </div>
