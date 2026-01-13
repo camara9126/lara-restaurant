@@ -67,7 +67,7 @@
         <div class="container-xxl position-relative p-0">
             
             <nav class="navbar navbar-expand-lg navbar-white bg-white px-4 px-lg-5 py-3 py-lg-0">
-                <a href="/" class="navbar-brand p-0">
+                <a href="{{route('home')}}" class="navbar-brand p-0">
                      <img src="{{asset('assets/img/logo-3.png')}}" width="160" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -122,7 +122,7 @@
                                             </ul>
                                         </div>
                                     @endif
-                        <form method="post" action="{{ route('commande')}}">
+                        <form method="post" action="{{ route('commande.speciale')}}">
                             @csrf
                             <div class="mb-3">
                                 <label class="form-label">Nom Complet</label>

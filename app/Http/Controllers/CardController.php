@@ -93,28 +93,59 @@ class CardController extends Controller
     }
 
 
+    // Commande en ligne
+    public function commande(Request $request)
+    {
+        $message = "🛒Commande speciale\n\n ";
+         $request->validate([
+            'nom' => 'required|string',
+            'telephone' => 'required|string|max:20',
+            'date' => 'required',
+            'commentaire' => 'required|string',
+         ]);
+
+         //dd($request);
+         // Numero whatsapp
+         $whatsapp = '221785470838';
+
+         // message commande
+         $message .= "Nom : {$request->nom}\n\n";
+         $message .= "telephone : {$request->telephone}\n\n";
+         $message .= "date : {$request->date}\n\n";
+         $message .= "commande : {$request->commentaire}";
+
+         
+
+         $url = "https://wa.me/{$whatsapp}?text=" . urlencode($message);
+
+         return redirect()->away($url);
+
+    }
+
+    
+
     public function whatsapp()
     {
 
-    $cartItems = Cart::content();
+        $cartItems = Cart::content();
 
-    $message = "🛒 Bonjou ! Voici ma commande%0A";
+        $message = "🛒 Bonjou ! Voici ma commande\n\n";
 
-    foreach ($cartItems as $item) {
+        foreach ($cartItems as $item) {
 
-        //$lineTotal = $item->price * $item->qty;
+            //$lineTotal = $item->price * $item->qty;
 
-        $message .= "🍽 {$item->name} ";
-        $message .= "PU : " . number_format($item->price, 0, ',', ' ') . " FCFA - ";
-        $message .= "Quantité : {$item->qty} ";
-        //$message .= "Total : " . number_format($lineTotal, 0, ',', ' ') . " FCFA - ";
+            $message .= "🍽 {$item->name} ";
+            $message .= "PU : " . number_format($item->price, 0, ',', ' ') . " FCFA - ";
+            $message .= "Quantité : {$item->qty} ";
+            //$message .= "Total : " . number_format($lineTotal, 0, ',', ' ') . " FCFA - ";
 
-        if (!empty($articles->model->image)) {
-            $message .= "Image : {$item->options->image} ";
-        }
+            if (!empty($articles->model->image)) {
+                $message .= "Image : {$item->options->image} ";
+            }
 
-        $message .= " ";
-        }
+            $message .= " ";
+            }
 
         // total du panier
         $total = Cart::subtotal(0, ',', ' ');

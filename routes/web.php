@@ -74,5 +74,5 @@ Route::get('/menu/{id}',[MenuController::class, 'show'])->name('menu.show');
 
 //Route whatsapp
 Route::get('/whatsapp', [CardController::class, 'whatsapp'])->name('cart.whatsapp');
-Route::post('/commande', [CardController::class, 'commande'])->name('commande');
+Route::post('/commande', [CardController::class, 'commande'])->name('commande.speciale');
 
