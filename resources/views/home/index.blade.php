@@ -65,7 +65,7 @@
         
         <nav class="navbar navbar-expand-lg navbar-white bg-white px-4 px-lg-5 py-3 py-lg-0">
             <a href="{{route('home')}}" class="navbar-brand p-0">
-                    <img src="{{asset('assets/img/new-logo.png')}}" width="160" alt="Logo">
+                    <img src="{{asset('assets/img/new-logo.png')}}" width="100" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>&nbsp;
