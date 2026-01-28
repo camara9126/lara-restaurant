@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">  
-    <meta name="theme-color" content="#f1b40aff">
+    <meta name="theme-color" content="#ff9d1b">
     <meta name="google-site-verification" content="Xwx1kjHgpd3Q2cyQyA7s-5_MuTO_d0QpTQtblZtgL08" />
 
     <!-- Favicon -->
@@ -42,7 +42,7 @@
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
     <!-- Icon Image -->
-     <link rel="shortcut icon" href="{{asset('assets/img/logo2.jpg')}}"/>
+     <link rel="shortcut icon" href="{{asset('assets/img/new-logo.png')}}"/>
 
     <!-- Manifest -->
 </head>
@@ -65,7 +65,7 @@
         
         <nav class="navbar navbar-expand-lg navbar-white bg-white px-4 px-lg-5 py-3 py-lg-0">
             <a href="{{route('home')}}" class="navbar-brand p-0">
-                    <img src="{{asset('assets/img/logo-3.png')}}" width="160" alt="Logo">
+                    <img src="{{asset('assets/img/new-logo.png')}}" width="160" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>&nbsp;
