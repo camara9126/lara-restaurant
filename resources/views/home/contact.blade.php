@@ -3,7 +3,7 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Contact-Nous</h5>
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Contactez-Nous</h5>
                     <h1 class="mb-5">Contact pour toute question</h1>
                 </div>
                 <div class="row g-4">
@@ -22,10 +22,9 @@
                     </div>
 
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-primary btn-social" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-primary btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <!--<a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>-->
+                        <a class="btn btn-outline-primary btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-primary btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary btn-social" href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                     </div>
                 </div>

@@ -499,6 +499,7 @@
     height: 35px;
     display: flex;
     align-items: center;
+    background-color: #0F172B;
     justify-content: center;
     color: var(--light);
     border: 1px solid #FFFFFF;

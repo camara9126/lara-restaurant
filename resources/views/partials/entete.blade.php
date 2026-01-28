@@ -9,7 +9,6 @@
     <meta content="" name="keywords">
     <meta content="" name="description">  
     <meta name="theme-color" content="#f1b40aff">
-    <meta name="apple-mobile-web-app-capable" content="#f1b40aff">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -45,7 +44,6 @@
      <link rel="shortcut icon" href="{{asset('assets/img/logo2.jpg')}}"/>
 
     <!-- Manifest -->
-    <link rel="manifest" href="/manifest.json">
 </head>
 
 <body>
@@ -113,44 +111,35 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                                    @if ($errors->any())
-                                        <div class="alert alert-danger">
-                                            <ul>
-                                                @foreach ($errors->all() as $error)
-                                                    <li>{{ $error }}</li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                    @endif
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <form method="post" action="{{ route('commande.speciale')}}">
                             @csrf
                             <div class="mb-3">
                                 <label class="form-label">Nom Complet</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="nom" placeholder="Votre nom et prénom">
-                                    <!--<span class="input-group-text">
-                                        <i class="fas fa-list"></i>
-                                    </span>-->
+                                    <input type="text" class="form-control" name="nom" placeholder="Votre prénom et nom">
                                 </div>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Téléphone</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="telephone" placeholder="Entrer votre numéro">
-                                    <!--<span class="input-group-text password-toggle">
-                                        <i class="fas fa-phone"></i>
-                                    </span>-->
+                                    <input type="text" class="form-control" name="telephone" placeholder="Entrer votre numéro de telephone">
                                 </div>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Date de Livraison</label>
                                 <div class="input-group">
-                                    <input type="date" class="form-control" name="date" placeholder="Entrer votre date de livraison">
-                                    <!--<span class="input-group-text password-toggle">
-                                        <i class="fas fa-phone"></i>
-                                    </span>-->
+                                    <input type="date" class="form-control" name="date" placeholder="Entrer la date de livraison">
                                 </div>
                             </div>
 
@@ -158,9 +147,6 @@
                                 <label class="form-label">Details de la commande</label>
                                 <div class="input-group">
                                     <textarea class="form-control" name="commentaire"></textarea>
-                                    <!--<span class="input-group-text password-toggle">
-                                        <i class="fas fa-phone"></i>
-                                    </span>-->
                                 </div>
                             </div>
 

@@ -7,24 +7,16 @@ use App\Http\Controllers\PersonnelController;
 use App\Http\Controllers\UserController;
 use App\Models\Article;
 use App\Models\Menu;
-use App\Models\User;
-
-use Illuminate\Container\Attributes\Auth;
 use Illuminate\Support\Facades\Route;
+
 
 // page d'accueil
 Route::get('/', function () {
-    $menus= Menu::all();
+    $menus= Menu::where('description','!=', 'plats')->latest()->get();
     $plats= Menu::where('description','plats')->latest()->get();
     $articles= Article::all();
     return view('home.index', compact('menus','articles','plats'));
 })->name('home');
-
-Route::get('/doc/{id}', function ($id) {
-   $menu= menu::findOrFail($id);
-    $articles= Article::where('menu_id', $menu->id)->get();
-    return view('home.test2', compact('articles'));
-});
 
 
 //contact

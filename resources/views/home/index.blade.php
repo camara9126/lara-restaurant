@@ -90,7 +90,7 @@
                                         <div class="card profile-card w-100">
                                             <div class="card-body text-center">
                                                 <a href="{{route('menu.show',['id'=>$plat->id]) }}" class="justify-content-center">
-                                                    <img src="{{asset('storage/'.$plat->image)}}" width="80" alt="{{$plat->nom}}" class="rounded-circle profile-img mb-3">
+                                                    <img src="{{asset('storage/'.$plat->image)}}" width="50" alt="{{$plat->nom}}" class="rounded-circle profile-img mb-3">
                                                 </a>
                                                 <a href="{{route('menu.show',['id'=>$plat->id]) }}" style="color: #030b51;" class="card-title">
                                                     <b class="card-title mb-0">{{$plat->nom}}</b>
