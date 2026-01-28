@@ -27,8 +27,10 @@ Route::get('/contact', function () {
 
 //menu
 Route::get('/menu', function () {
-   $menus= Menu::all();
-    return view('home.menu', compact('menus'));
+   $menus= Menu::where('description','!=', 'plats')->latest()->get();
+    $plats= Menu::where('description','plats')->latest()->get();
+
+    return view('home.menu', compact('menus','plats'));
 })->name('menu');
 
 

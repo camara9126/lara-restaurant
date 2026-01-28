@@ -175,6 +175,37 @@
 
         <!-- Menu Start -->
         <div class="container-xxl py-3" id="menu">
+            <!-- Menu Nos Plats-->
+             @if(count($plats) > 0)
+                <div class="container mb-4">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="section-title ff-secondary text-center text-primary fw-bold">Nos Plats</h5>
+                        <!--<h1 class="mb-2">Nos articles</h1>-->
+                    </div>
+                    <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane fade show p-0 active">
+                                <div class="row  g-2 g-sm-3 g-xl-4">                                
+                                    @foreach($plats as $plat)
+                                    <div class="col-lg-4 col-4">
+                                        <div class="card profile-card w-100">
+                                            <div class="card-body text-center">
+                                                <a href="{{route('menu.show',['id'=>$plat->id]) }}" class="justify-content-center">
+                                                    <img src="{{asset('storage/'.$plat->image)}}" width="50" alt="{{$plat->nom}}" class="rounded-circle profile-img mb-0">
+                                                </a>
+                                                <a href="{{route('menu.show',['id'=>$plat->id]) }}" style="color: #030b51;">
+                                                    <small class="fst-italic mb-0">{{$plat->nom}}</small>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
