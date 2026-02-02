@@ -65,7 +65,7 @@
         
         <nav class="navbar navbar-expand-lg navbar-white bg-white px-4 px-lg-5 py-3 py-lg-0">
             <a href="{{route('home')}}" class="navbar-brand p-0">
-                    <img src="{{asset('assets/img/new-logo.png')}}" width="100" alt="Logo">
+                    <img src="{{asset('assets/img/new-logo.png')}}" width="80" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>&nbsp;
@@ -229,40 +229,32 @@
             </div>
         </div>
         <!-- Service End -->
+         
+        @if(count($plats) > 0)
+        <main class="container mt-3 mb-0">
 
-        <!-- Menu Start -->
-        <div class="container-xxl py-3" id="menu">
-            <!-- Menu Nos Plats-->
-             @if(count($plats) > 0)
-                <div class="container mb-4">
-                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="section-title ff-secondary text-center text-primary fw-bold">Nos Plats</h5>
-                        <!--<h1 class="mb-2">Nos articles</h1>-->
-                    </div>
-                    <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="tab-content">
-                            <div id="tab-1" class="tab-pane fade show p-0 active">
-                                <div class="row  g-2 g-sm-3 g-xl-4">                                
-                                    @foreach($plats as $plat)
-                                    <div class="col-lg-4 col-4">
-                                        <div class="card profile-card w-100">
-                                            <div class="card-body text-center">
-                                                <a href="{{route('menu.show',['id'=>$plat->id]) }}" class="justify-content-center">
-                                                    <img src="{{asset('storage/'.$plat->image)}}" width="50" alt="{{$plat->nom}}" class="rounded-circle profile-img mb-0">
-                                                </a>
-                                                <a href="{{route('menu.show',['id'=>$plat->id]) }}" style="color: #030b51;">
-                                                    <small class="fst-italic mb-0">{{$plat->nom}}</small>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h5 class="section-title ff-secondary text-center text-primary fw-bold">Plats Specials</h5>
+            </div>
+            <div class="menu-categories">
+                 <!-- Menu Nos Plats Specials-->
+                @foreach($plats as $plat)
+                <div class="category-card">
+                    <div class="category-image" style="background-image: url('{{asset('storage/'.$plat->image)}}');">
+                        <a href="{{route('menu.show',['id'=>$plat->id]) }}">
+                            <small class="category-name">{{$plat->nom}}</small>
+                        </a>
                     </div>
                 </div>
-            @endif
+                @endforeach
+            </div>
+
+        </main>
+        @endif
+        
+        <!-- Menu Start -->
+        <div class="container-xxl py-3" id="menu">
+            
             <!-- Menu Food-->
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -270,25 +262,24 @@
                     <!--<h1 class="mb-2">Nos articles</h1>-->
                 </div>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="tab-content">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row  g-2 g-sm-3 g-xl-4">                                
-                                @foreach($menus as $menu)
-                                <div class="col-lg-3 col-4">
-                                    <div class="card profile-card w-100">
-                                        <div class="card-body text-center align-items-center">
-                                            <a href="{{route('menu.show',['id'=>$menu->id]) }}" class="justify-content-center">
-                                                <img src="{{asset('storage/'.$menu->image)}}" width="80" alt="{{$menu->nom}}" class="rounded-circle profile-img mb-2">
-                                            </a>
-                                            <a href="{{route('menu.show',['id'=>$menu->id]) }}" style="color: #030b51;" class="card-title">
-                                                <b class="card-title mb-0">{{$menu->nom}}</b>
-                                            </a>
-                                        </div>
-                                    </div>
+                    <div class="row  g-2 g-sm-3 g-xl-4">                                
+                        @foreach($menus as $menu)
+                        <div class="col-lg-3 col-4">
+                            <div class="card profile-card w-100">
+                                <div class="team-item text-center rounded overflow-hidden mb-0">
+                                    <div class="rounded-circle overflow-hidden m-4">
+                                        <a href="{{route('menu.show',['id'=>$menu->id]) }}">
+                                            <img src="{{asset('storage/'.$menu->image)}}" width="130" class="img-fluid" alt="{{$menu->nom}}">
+                                        </a>
+                                        </div>    
+                                        <a href="{{route('menu.show',['id'=>$menu->id]) }}" style="color: #030b51;" class="card-title">
+                                            <b class="card-title mb-0">{{$menu->nom}}</b>
+                                        </a>
+                                    
                                 </div>
-                                @endforeach
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

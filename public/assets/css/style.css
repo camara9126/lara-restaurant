@@ -5,6 +5,11 @@
     --dark: #0F172B;
 }
 
+body {
+    color: var(--text-color);
+    background-color: white;
+}
+
 .ff-secondary {
     font-family: 'Pacifico', cursive;
 }
@@ -336,25 +341,106 @@
     display: inline-block;
 }
 
-/**.section-title::before {
-    position: absolute;
-    content: "";
-    width: 45px;
-    height: 2px;
-    top: 50%;
-    margin-top: -1px;
-    background: var(--primary);
+.category-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
-.section-title::after {
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.category-image {
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.category-name {
     position: absolute;
-    content: "";
-    width: 45px;
-    height: 2px;
-    top: 50%;
-    margin-top: -1px;
-    background: var(--primary);
-}**/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ff9d1b;
+    color: black;
+    text-align: center;
+}
+
+
+ /* Menu Grid - Version Desktop */
+        .menu-categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+ /* Responsive Design - Version Mobile */
+        @media (max-width: 768px) {
+            .restaurant-name {
+                font-size: 2.5rem;
+            }
+
+            .menu-title {
+                font-size: 2.2rem;
+            }
+
+ /* Menu en 3 colonnes pour mobile */
+            .menu-categories {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+
+            .category-card {
+                height: auto;
+                min-height: 150px;
+            }
+
+            .category-image {
+                height: 150px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Pour les très petits écrans mobiles */
+        @media (max-width: 480px) {
+            .restaurant-name {
+                font-size: 2rem;
+            }
+
+            .menu-title {
+                font-size: 1.8rem;
+            }
+
+            .menu-categories {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+
+            .category-card {
+                min-height: 120px;
+            }
+
+            .category-image {
+                height: 120px;
+            }
+
+        }
 
 .section-title.text-start::before,
 .section-title.text-end::after {

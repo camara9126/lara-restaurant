@@ -18,6 +18,13 @@ Route::get('/', function () {
     return view('home.index', compact('menus','articles','plats'));
 })->name('home');
 
+Route::get('/test', function () {
+    $menus= Menu::where('description','!=', 'plats')->latest()->get();
+    $plats= Menu::where('description','plats')->latest()->get();
+    $articles= Article::all();
+    return view('home.test', compact('menus','articles','plats'));
+})->name('test');
+
 
 //contact
 Route::get('/contact', function () {

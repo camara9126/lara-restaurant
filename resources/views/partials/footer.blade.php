@@ -16,10 +16,10 @@
                         <p class=""><i class="fa fa-phone-alt"></i> &nbsp; 78-547-08-38</p>
                         <p class=""><i class="fa fa-envelope"></i> &nbsp; contact@ofood.com</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://vm.tiktok.com/ZS91pD15VeQrh-93VpL/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/o.foodsn" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://youtube.com/@ofoodsn?si=XclKvIPp7BbgAC5m" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/ofood.sn?igsh=MW8wZ2hwbm8xemRlZQ=="><i class="fab fa-instagram" target="_blank"></i></a>
                         </div>
                     </div>
                 </div>
