@@ -45,6 +45,8 @@
      <link rel="shortcut icon" href="{{asset('assets/img/new-logo.png')}}"/>
 
     <!-- Manifest -->
+     <link rel="manifest" href="/manifest.json">
+     <meta name="theme-color" content="#ff9d1b">
 </head>
 
 <body>

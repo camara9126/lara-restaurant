@@ -36,8 +36,8 @@
             <div class="container">
                 <div class="copyright">
                     <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="/">O'Foodsn</a>, Tous Droit Reserve. 							
+                        <div class="col-md-6 text-center text-md-start">
+                            &copy;<?= now()->year ?> <a class="border-bottom" href="/">O'Food</a>, Tous Droit Reserve. 							
 							Designed By <a class="border-bottom" href="https://www.bcmgroupe.com" target="_blank">BCM Groupe Saint-Louis</a>
                         </div>
                     </div>
@@ -66,6 +66,11 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
 </body>
 
 </html>

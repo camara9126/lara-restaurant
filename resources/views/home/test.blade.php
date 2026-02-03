@@ -25,7 +25,7 @@
             padding: 20px;
         }
 
-        /* Header */
+         Header */
         header {
             text-align: center;
             padding: 30px 0;

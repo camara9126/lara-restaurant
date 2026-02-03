@@ -45,6 +45,8 @@
      <link rel="shortcut icon" href="{{asset('assets/img/new-logo.png')}}"/>
 
     <!-- Manifest -->
+     <link rel="manifest" href="/manifest.json">
+     <meta name="theme-color" content="#ff9d1b">
 </head>
 
 <body>
@@ -94,6 +96,7 @@
 
         <!-- Icon Fixe -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square icon-fixe dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-headset"></i></a>
+
         <div class="dropdown-menu m-0">
             <a href="tel:221785470838" type="button" target="_blank" class="dropdown-item text-primary mr-0 pr-0" style="font-size: 12px;">
                 <i class="fa fa-headset"></i>&nbsp;Service clientelle
